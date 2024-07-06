@@ -2,6 +2,9 @@ package Map61B;
 
 import java.util.ArrayList;
 import java.util.List;
+import static org.junit.Assert.*;
+import org.junit.Test;
+
 
 public class ArrayMap<K, V> implements Map61B<K, V>{
     private K[] keys;
@@ -72,11 +75,18 @@ public class ArrayMap<K, V> implements Map61B<K, V>{
         return keylist;
     }
 
-    public static void main(String[] args) {
-        ArrayMap<String, Integer> m = new ArrayMap<String, Integer>();
-        m.put("horse", 3);
-        m.put("fish", 9);
-        m.put("house", 10);
-
+    @Test
+    public void test() {
+        ArrayMap<Integer, Integer> am = new ArrayMap<Integer, Integer>();
+        am.put(2, 5);
+        int expected = 5;
+        assertEquals(expected, (int) am.get(2));
     }
+
+//    public static void main(String[] args) {
+//        ArrayMap<String, Integer> m = new ArrayMap<String, Integer>();
+//        m.put("horse", 3);
+//        m.put("fish", 9);
+//        m.put("house", 10);
+//    }
 }
