@@ -83,10 +83,10 @@ public class ArrayMap<K, V> implements Map61B<K, V>{
         assertEquals(expected, (int) am.get(2));
     }
 
-//    public static void main(String[] args) {
-//        ArrayMap<String, Integer> m = new ArrayMap<String, Integer>();
-//        m.put("horse", 3);
-//        m.put("fish", 9);
-//        m.put("house", 10);
-//    }
+    public static void main(String[] args) {
+        ArrayMap<String, Integer> m = new ArrayMap<String, Integer>();
+        m.put("horse", 3);
+        m.put("fish", 9);
+        m.put("house", 10);
+    }
 }
